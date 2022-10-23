@@ -1,0 +1,72 @@
+<!-- <mat-sidenav-container>
+  <mat-sidenav-content>
+    <p class="reg">
+      Register Here . . .
+      <button class="close" mat-button mat-dialog-close>X</button>
+    </p>
+    <form [formGroup]="myForm" *ngIf="isSearch">
+      <div class="misc-bottom-padding" appearance="fill">
+        <mat-label>Want to register as Service Provider ?</mat-label>
+adio-group>
+      </div>
+  <p class="reg">
+    {{ selectedService }}
+  </p>
+  <mat-form-field [floatLabel]="'auto'" appearance="fill">
+    <mat-label>Service Name</mat-label>
+    <input matInput readonly />
+  </mat-form-field>
+</form>
+    SubmiT
+      <div class="button-wrapper">
+        <button
+          type="submit"
+          [disabled]="!myForm.status"
+          class="button-wrapper"
+          mat-raised-button
+          mat-dialog-close
+          color="primary"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+<div class="tile is-ancestor contain">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-warning">
+          <p class="title">About Us...</p>
+          <p class="subtitle">Top tile</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <figure class="image is-360x240">
+            <img
+              src="https://content.jdmagicbox.com/comp/bhilai/i5/9999px788.x788.171115115006.a2i5/catalogue/service-on-doorstep-bhilai-ac-repair-and-services-12njq5wprd.jpg"
+            />
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <figure class="image is-360x120">
+          <img
+            src="https://harpreetford.com/assets/admin/images/WhatsApp%20Image%202020-01-06%20at%203.06.50%20PM.jpeg"
+          />
+        </figure>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-primary is-10">
+      <div class="content">
+        <app-search-service></app-search-service>
+      </div>
+    </article>
+  </div>
+</div>

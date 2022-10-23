@@ -1,0 +1,36 @@
+<form [formGroup]="myForm" J>
+  <mat-form-field appearance="fill">
+    <mat-label>Services</mat-label>
+    <input
+      type="text"
+      placeholder="Pick one"
+      aria-label="Services"
+      matInput
+      formControlName="service"
+      [matAutocomplete]="auto"
+    />
+
+    <mat-autocomplete
+      autoActiveFirstOption
+      #auto="matAutocomplete"
+      [displayWith]="displayFn"
+    >
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option.serviceName }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <button
+    mat-icon-button
+    type="submit"
+    color="primary"
+    matTooltip="Search the service"
+    (click)="findService()"
+    aria-label="Search Services"
+  >
+    <mat-icon>search</mat-icon>
+  </button>
+</form>

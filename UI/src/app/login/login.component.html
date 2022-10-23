@@ -1,0 +1,100 @@
+<mat-sidenav-container *ngIf="data">
+  <header class="modal-card-head">
+    <p class="modal-card-title">Login Here . . .</p>
+    <button class="close" mat-button mat-dialog-close>X</button>
+  </header>
+  <section class="modal-card-body">
+    <form [formGroup]="myForm" novalidate>
+      <mat-form-field [floatLabel]="'auto'" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="your email"
+          type="email"
+          formControlName="email"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field [floatLabel]="'auto'" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="your password"
+          type="password"
+          formControlName="password"
+          required
+        />
+      </mat-form-field>
+    </form>
+  </section>
+  <footer class="modal-card-foot">
+    <button
+      mat-raised-button
+      mat-dialog-close
+      color="warn"
+      (click)="login($event, true)"
+      class="button is-success"
+    >
+      Login
+    </button>
+
+    <button
+      class="button"
+      (click)="openRegDialog()"
+      mat-raised-button
+      mat-dialog-close
+      color="primary"
+      matTooltip="Create an Account"
+    >
+      Sign Up
+    </button>
+  </footer>
+</mat-sidenav-container>
+<mat-sidenav-container *ngIf="!data">
+  <mat-sidenav-content>
+    <p class="para">Do you wish to continue logout?</p>
+
+    <div class="button-wrapper">
+      <button
+        mat-raised-button
+        mat-dialog-close
+        (click)="logout()"
+        color="primary"
+      >
+        Yes
+      </button>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <mat-sidenav-container *ngIf="data">
+    <mat-sidenav-content>
+        <p class="para">Login Here . . . <button mat-button mat-dialog-close class="close">X</button></p>
+       
+        <form [formGroup]="myForm" novalidate>
+            <mat-form-field [floatLabel]="'auto'" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="your email" type="email" formControlName="email" required>
+            </mat-form-field>
+
+            <mat-form-field [floatLabel]="'auto'" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="your password" type="password" formControlName="password" required>
+            </mat-form-field>
+            <div class="button-wrapper">
+                <button mat-raised-button mat-dialog-close color="warn" (click)="login(true)">Login</button>
+
+            </div>
+        </form>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<mat-sidenav-container *ngIf="!data">
+    <mat-sidenav-content>
+        <p class="para">Do you wish to continue logout ? </p>
+        <div class="button-wrapper">
+            <button mat-raised-button mat-dialog-close
+                (click)="logout()" color="primary">Yes</button>
+    </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->

@@ -1,0 +1,65 @@
+// .misc-bottom-padding {
+//   margin: 6px 0 10px;
+// }
+.misc-bottom-padding mat-label {
+  margin-left: 15px;
+}
+
+.title-center {
+  margin: 0 auto;
+}
+.button-wrapper {
+  margin: 10px 0px 0px 7rem;
+}
+
+.close {
+  float: right;
+}
+
+.multiple-items {
+  width: 20rem;
+  margin-left: 2rem;
+  color: #f0f0f0;
+  margin-left: 5rem;
+}
+
+mat-sidenav-container {
+  mat-sidenav-content {
+    overflow-y: scroll;
+    flex-direction: column;
+    flex: 2 1 auto;
+    .reg {
+      font-family: "Gill Sans", "Helvetica Neue", sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      color: cadetblue;
+    }
+    form {
+      width: 40rem;
+      margin: 30px auto 90px;
+      display: flex;
+      overflow-y: auto;
+      flex-direction: column;
+      mat-form-field,
+      .misc-bottom-padding {
+        width: 20rem;
+        margin-left: 5rem;
+        height: 1.75rem;
+        margin-bottom: 2.25rem;
+      }
+      mat-radio-label {
+        margin-right: 5px;
+      }
+      mat-radio-group {
+        margin-left: 1.5rem;
+        display: inline-flex;
+        flex-direction: row;
+      }
+      mat-expansion-panel-header,
+      mat-expansion-panel,
+      mat-chip-list {
+        color: #f0f0f0;
+      }
+    }
+  }
+}

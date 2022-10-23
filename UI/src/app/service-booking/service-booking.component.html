@@ -1,0 +1,29 @@
+<mat-table [dataSource]="dataSource">
+  <!-- User name Definition -->
+  <ng-container matColumnDef="username">
+    <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row.id }} </mat-cell>
+  </ng-container>
+
+  <!-- Age Definition -->
+  <ng-container matColumnDef="age">
+    <mat-header-cell *matHeaderCellDef> Service NMW </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row.serviceName }} </mat-cell>
+  </ng-container>
+
+  <!-- Title Definition -->
+  <ng-container matColumnDef="title">
+    <mat-header-cell *matHeaderCellDef> SvcDtlId </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row.serviceDetailId }} </mat-cell>
+  </ng-container>
+
+  <!-- Header and Row Declarations -->
+  <mat-header-row
+    *matHeaderRowDef="['username', 'age', 'title']"
+  ></mat-header-row>
+  <!--
+  <mat-row
+    *matRowDef="let row; columns: ['id', 'serviceName', 'serviceDetailId']"
+  ></mat-row> </mat-table
+>-->
+</mat-table>

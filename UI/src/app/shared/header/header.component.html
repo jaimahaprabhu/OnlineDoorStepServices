@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    #menuTrigger="matMenuTrigger"
+    (mouseover)="menuTrigger.openMenu()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <span (mouseleave)="menuTrigger.closeMenu()">
+      <button mat-menu-item routerLink="" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        Home
+      </button>
+      <button routerLink="/myBookings" routerLinkActive="active" mat-menu-item>
+        <mat-icon>subject</mat-icon>
+        MyBookings
+      </button>
+      <button [disabled]="getStatus()" (click)="openRegDialog()" mat-menu-item>
+        <mat-icon>how_to_reg</mat-icon>
+        EnrollAsProfessional
+      </button>
+      <button mat-menu-item *ngIf="!getStatus()" (click)="openDialog(true)">
+        <mat-icon>face_icon</mat-icon>
+        <span>Login</span>
+      </button>
+      <button mat-menu-item *ngIf="getStatus()" (click)="openDialog(false)">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </span>
+  </mat-menu>
+  <p class="head" routerLink="" routerLinkActive="active">
+    OnlineDoorStepServices<span class="link">.</span>
+  </p>
+</mat-toolbar>
